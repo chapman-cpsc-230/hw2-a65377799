@@ -1,0 +1,31 @@
+#!/bin/python
+
+def newtons_cooling (T,T_a,minutes) :
+
+    #print air Temperature
+    print "Temperature of the air: ", T_a
+
+    #print Number of minutes
+    print "Number of minutes: ",minutes
+
+    #constant value
+    k = 0.055
+
+    #looping variable
+    count = 0
+    starting_temp = T
+
+    #print starting details
+    print "Minute\t Temperature"
+    
+    while count <= minutes :
+        print count,"\t",round(starting_temp,1)
+        temp = starting_temp - k *(starting_temp - T_a)
+        starting_temp = temp
+
+        #increment count
+        count +=1
+
+
+#calling function
+newtons_cooling (100,20,20)
